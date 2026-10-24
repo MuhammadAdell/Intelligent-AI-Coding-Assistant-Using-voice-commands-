@@ -1,9 +1,3 @@
-# Speech to text with Faster-Whisper. English only: the language is fixed
-# to "en" so no Arabic (or any other language) can enter the pipeline.
-# The model runs in a subprocess: its OpenMP runtime clashes with the one
-# already loaded by torch/sentence-transformers in the API process and the
-# worker crashes on first use when both live in the same process.
-
 import subprocess
 import sys
 
