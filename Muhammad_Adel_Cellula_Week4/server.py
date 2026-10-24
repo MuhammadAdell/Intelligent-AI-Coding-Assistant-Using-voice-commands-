@@ -1,6 +1,3 @@
-# FastAPI backend of the AI coding assistant. Questions arrive as text or voice.
-# Voice -> Faster-Whisper -> text -> intent route -> HumanEval chunks in Chroma
-# -> Stack Overflow chunking when the answer is not in the knowledge base -> answer
 # Run with: python3 -m uvicorn server:app --port 8000
 # Endpoints and request samples: http://localhost:8000/docs
 
