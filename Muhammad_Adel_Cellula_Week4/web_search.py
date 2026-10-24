@@ -1,11 +1,3 @@
-# Web augmentation for the RAG path, from the CRAG idea: when the
-# knowledge base is judged not relevant, search Stack Overflow.
-# Each question is paired with its top-voted answer, the pages go
-# through web chunking only with the same splitter as the offline
-# phase, and the first chunk of each page (title + start of the
-# answer) becomes the context for the evaluator.
-# Uses the public api.stackexchange.com endpoint, no key required.
-
 import gzip
 import html
 import io
