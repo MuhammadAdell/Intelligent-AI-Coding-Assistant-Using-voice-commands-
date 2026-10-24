@@ -16,7 +16,6 @@ from stt import transcribe
 
 app = FastAPI(title="AI Coding Assistant")
 
-# one chat session per browser, kept in memory for the life of the server
 SESSIONS = {}
 
 
@@ -96,9 +95,6 @@ def answer_in_session(session, query):
         "needs_feedback": not result["relevant"],
     }
     session["messages"].append(message)
-
-    # the memory update is its own model call, so it can fail even after a good
-    # answer; keep the answer and note the failure instead of losing it
     try:
         memory.add_turn(query, answer)
         if message["code"]:
