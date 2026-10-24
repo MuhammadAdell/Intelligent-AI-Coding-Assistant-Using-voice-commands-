@@ -1,7 +1,3 @@
-# Downloads the openai/openai_humaneval dataset from the Hugging Face
-# datasets-server API and stores it directly in the Chroma sqlite database.
-# No intermediate files: chunk -> embed -> upsert into chroma_db/chroma.sqlite3
-
 import json
 import urllib.request
 from chromadb import PersistentClient
